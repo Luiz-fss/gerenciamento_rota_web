@@ -23,8 +23,8 @@ class MyApp extends StatelessWidget {
       initialRoute: "/",
       getPages: [
         GetPage(name: "/", page: ()=> HomePage()),
-        GetPage(name: "/courses/", page: ()=> CourseListPage()),
-        GetPage(name: "/courses/:id", page: ()=> CourseDetailPage(id: Get.parameters["id"]!)),
+        GetPage(name: "/courses/", page: ()=> CourseListPage(),transition: Transition.zoom),
+        GetPage(name: "/courses/:id", page: ()=> CourseDetailPage(id: Get.parameters["id"]!),transition: Transition.circularReveal),
       ],
     );
   }

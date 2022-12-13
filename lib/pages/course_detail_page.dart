@@ -9,7 +9,7 @@ class CourseDetailPage extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title:  Text("Curso $id}"),
+        title:  Text("Curso $id"),
       ),
       body: Center(
         child: ElevatedButton(

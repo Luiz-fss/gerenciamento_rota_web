@@ -22,7 +22,7 @@ class CourseListPage extends StatelessWidget {
               //off.all remove todas as telas anteriores.
               //final pegarArgumentoDaTela = await
               //Get.to(()=>CourseDetailPage(id: index.toString()));
-              Get.toNamed("/courses/$index");
+              Get.toNamed("/courses/$index",arguments: "TESTE ARGS");
             },
           );
         },
