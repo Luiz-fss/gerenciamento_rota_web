@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:get/get.dart';
 
 import 'course_detail_page.dart';
 
@@ -16,8 +17,12 @@ class CourseListPage extends StatelessWidget {
         itemBuilder: (context,index){
           return ListTile(
             title: Text("Curso"),
-            onTap: (){
-
+            onTap: ()async{
+              //usar o .of no lugar do .to equivale ao push.repleacement
+              //off.all remove todas as telas anteriores.
+              //final pegarArgumentoDaTela = await
+              //Get.to(()=>CourseDetailPage(id: index.toString()));
+              Get.toNamed("/courses/$index");
             },
           );
         },
