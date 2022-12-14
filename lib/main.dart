@@ -2,18 +2,32 @@ import 'package:flutter/material.dart';
 import 'package:gerenciamento_rotas_web/pages/course_detail_page.dart';
 import 'package:gerenciamento_rotas_web/pages/course_list_page.dart';
 import 'package:gerenciamento_rotas_web/pages/home_page.dart';
+import 'package:gerenciamento_rotas_web/router/router.gr.dart';
 import 'package:get/get.dart';
 import 'package:get/get_navigation/src/root/get_material_app.dart';
 
 void main() {
-  runApp(const MyApp());
+  runApp( MyApp());
 }
 
 class MyApp extends StatelessWidget {
-  const MyApp({Key? key}) : super(key: key);
+   MyApp({Key? key}) : super(key: key);
+
+  final router = AppRouter();
 
   @override
   Widget build(BuildContext context) {
+   /*Exemplo com AutoRouter*/
+    return MaterialApp.router(
+      title: 'Flutter Demo',
+      debugShowCheckedModeBanner: false,
+      theme: ThemeData(
+        primarySwatch: Colors.blue,
+      ),
+      routeInformationParser: router.defaultRouteParser(),
+      routerDelegate: router.delegate(),
+    );
+   /*exemplo com getX
     return GetMaterialApp(
       title: 'Flutter Demo',
       debugShowCheckedModeBanner: false,
@@ -26,7 +40,7 @@ class MyApp extends StatelessWidget {
         GetPage(name: "/courses/", page: ()=> CourseListPage(),transition: Transition.zoom),
         GetPage(name: "/courses/:id", page: ()=> CourseDetailPage(id: Get.parameters["id"]!),transition: Transition.circularReveal),
       ],
-    );
+    );*/
   }
 }
 
