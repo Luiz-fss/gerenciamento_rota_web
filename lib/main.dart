@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:gerenciamento_rotas_web/guards/check_if_logged_in.dart';
 import 'package:gerenciamento_rotas_web/pages/course_detail_page.dart';
 import 'package:gerenciamento_rotas_web/pages/course_list_page.dart';
 import 'package:gerenciamento_rotas_web/pages/home_page.dart';
@@ -13,7 +14,7 @@ void main() {
 class MyApp extends StatelessWidget {
    MyApp({Key? key}) : super(key: key);
 
-  final router = AppRouter();
+  final router = AppRouter(checkIfLoggedIn: CheckIfLoggedIn());
 
   @override
   Widget build(BuildContext context) {
