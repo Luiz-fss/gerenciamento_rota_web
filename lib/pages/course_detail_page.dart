@@ -1,8 +1,9 @@
+import 'package:auto_route/annotations.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 
 class CourseDetailPage extends StatelessWidget {
-  const CourseDetailPage({Key? key, required this.id}) : super(key: key);
+  const CourseDetailPage({Key? key, @PathParam() required this.id}) : super(key: key);
   final String id;
 
   @override
