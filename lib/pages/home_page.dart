@@ -15,7 +15,7 @@ class HomePage extends StatelessWidget {
         child: ElevatedButton(
           onPressed: (){
             //Get.to(()=>const CourseListPage(),);
-            Get.toNamed("/courses");
+            Get.toNamed("/courses/");
           },
           child: const Text("Ver cursos"),
         ),

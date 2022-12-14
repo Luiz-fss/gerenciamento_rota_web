@@ -14,9 +14,13 @@ class CourseDetailPage extends StatelessWidget {
       body: Center(
         child: ElevatedButton(
           onPressed: (){
-            Get.back(result: "Voltar passando algum argumento");
+            //Get.back(result: "Voltar passando algum argumento");
+            //Snack bar com Get
+           // Get.snackbar("Teste Snackbar", "Mensagem da snack");
+           //dialog
+           Get.dialog(AlertDialog(title: Text("Teste"),));
           },
-          child: const Text("Voltar"),
+          child: const Text("Mostrar snack"),
         ),
       ),
     );
