@@ -7,9 +7,11 @@ import 'package:gerenciamento_rotas_web/router/router.gr.dart';
 import 'package:get/get.dart';
 import 'package:get/get_navigation/src/root/get_material_app.dart';
 import 'package:get_it/get_it.dart';
+import 'package:url_strategy/url_strategy.dart';
 
 final getIt = GetIt.I;
 void main() {
+  setPathUrlStrategy();
   getIt.registerSingleton(AppRouter(checkIfLoggedIn: CheckIfLoggedIn()));
   runApp( MyApp());
 }
